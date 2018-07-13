@@ -264,35 +264,41 @@
     $("#saveform").on("click", function (event) {
       event.preventDefault();
 
-      // YOUR TASK!!!
-      // Code in the logic for storing and retrieving the most recent user.
-      // Don't forget to provide initial data to your Firebase database.
-      // name = $("#name-input").val().trim();
-      // email = $("#email-input").val().trim();
-      // age = $("#age-input").val().trim();
-      // comment = $("#comment-input").val().trim();
       fName = $("#fname").val().trim();
       lName = $("#lname").val().trim();
       email = $("#email").val().trim();
-      // phoneNumber = $("#phonenumber").val().trim();
-      // streetAddress = $("#streetaddress").val().trim();
-      // city = $("#city").val().trim();
-      // state = $("#state").val().trim();
-      // zipCode = $("#zipcode").val().trim();
-      // companyName = $("#companyname").val().trim();
-      // companyAddress = $("#companyaddress").val().trim();
-      // companyPhone = $("#companyphone").val().trim();
-      // companyPosition = $("#companyposition").val().trim();
-      // schoolName = $("#schoolname").val().trim();
-      // schoolAddress = $("#schooladdress").val().trim();
-      // fieldOfStudy = $("#studyfield").val().trim();
-      // certificate = $("#certificate").val().trim();
+      phoneNumber = $("#phonenumber").val().trim();
+      streetAddress = $("#streetaddress").val().trim();
+      city = $("#city").val().trim();
+      state = $("#state").val().trim();
+      zipCode = $("#zipcode").val().trim();
+      companyName = $("#companyname").val().trim();
+      companyAddress = $("#companyaddress").val().trim();
+      companyPhone = $("#companyphone").val().trim();
+      companyPosition = $("#companyposition").val().trim();
+      schoolName = $("#schoolname").val().trim();
+      schoolAddress = $("#schooladdress").val().trim();
+      fieldOfStudy = $("#studyfield").val().trim();
+      certificate = $("#certificate").val().trim();
 
       // Code for the push
       dataRef.ref().push({
-        "fName": fName,
-        "lName": lName,
-        "email": email,
+        fName,
+        lName,
+        email,
+        phoneNumber,
+        streetAddress,
+        city,
+        state,
+        zipCode,
+        companyName,
+        companyAddress,
+        companyPhone,
+        companyPosition,
+        schoolName,
+        schoolAddress,
+        fieldOfStudy,
+        certificate,
         "dateAdded": firebase.database.ServerValue.TIMESTAMP
       });
     });
